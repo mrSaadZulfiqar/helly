@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Vendor\Quote;
 
 use App\Models\Quote;
 use Illuminate\Foundation\Http\FormRequest;

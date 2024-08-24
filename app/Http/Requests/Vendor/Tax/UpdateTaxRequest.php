@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Vendor\Tax;
 
 use App\Models\Tax;
 use Illuminate\Foundation\Http\FormRequest;

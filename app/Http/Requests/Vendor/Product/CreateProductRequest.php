@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Vendor\Product;
 
 use App\Models\Product;
 use Illuminate\Foundation\Http\FormRequest;
