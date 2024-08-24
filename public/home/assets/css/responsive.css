@@ -1,0 +1,46 @@
+@media (max-width: 1024px) {
+    .hero-content h1  {
+        font-size: 36px;
+    }
+
+    .hero-content .container {
+        padding-left: 0px;
+    }
+
+    .hero-content .container::before {
+        left: -100%;
+    }
+
+    .about-item{
+        position: static !important;
+        width: 100%;
+    }
+
+    .hero-banner {
+        margin: 0px;
+    }
+
+    .process-section{
+        min-height: 1340px;
+    }
+
+    .process-section .col-lg-4:hover .process-item {
+        height: 100%;
+    }
+
+    .process-item {
+        height: 100%;
+    }
+
+    .app-image {
+        position: static;
+    }
+
+    .testimonial-slider {
+        left: 30px;
+    }
+
+    .slick-prev, .slick-next{
+        display: none;
+    }
+}

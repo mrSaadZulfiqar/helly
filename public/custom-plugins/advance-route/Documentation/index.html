@@ -1,0 +1,448 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Advance Route Planner Ver. 7.0 Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Advance Route Planner &rdquo; Documentation by &ldquo;Zincksoft.com&rdquo; v7.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Advance Route Planner&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Updated: 10/01/2017<br>
+					By: Zincksoft.com<br>
+					Email: <a href="mailto:zincksoft@gmail.com">zincksoft@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing our product. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/zincksoft">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">Details</a></li>
+			<li><a href="#javascript">How to Use</a></li>
+            <li><a href="#credits">Sources and Credits</a></li>
+			
+            
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) Details</strong> - <a href="#toc">top</a></h3>
+		<p>Advance Route Planner is a A to B RoutePlanner tool written in Pure Javascript with Google Map Ver. 3 API. it have very advance features like Weather layer, Language Support, Auto Location Detection, Add Multiple Waypoints, Get Shortest Route, Calucate Trip / Travel Cost, Get NearBy Places of the Route, Convert Miles to KM and vise versa, Responsiveness, Google Adsense, Dragable Route, Shareable Link Genrator, Print button, Change Google Map Language, Fix your starting / ending point with ease and get proper Route Directions in details via Google API. This tool can be easily attached to any existing Projects. if you have any query you can contact us any time at <a href="http://codecanyon.net/user/zincksoft">my profile page or raise ticket.</a></p>
+		
+				
+		<hr>
+
+		
+
+		
+		
+		<h3 id="javascript"><strong>B) How to Use</strong> - <a href="#toc">top</a></h3>
+		
+		<p><strong>Extract all the files form the zip. The file you need to include Google API Javascript along with routeplannerapi.js.</strong></p>
+        
+        <p><strong>For getting weather details, Please signup with Openweather.org and get free Key and update on routeplannerapi.js</strong></p>
+        
+    <p><strong>If you wanted to install the plugin in your website please follow below after setting up above settings</strong> </p>
+    
+    <div class="code">
+      <p>
+      include below libraries <br>
+
+   <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2
+3</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;script </span><span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;https://maps.googleapis.com/maps/api/js?v=3.exp&quot;</span><span style="color: #007700">&gt;&lt;/script&gt;</span>
+<span style="color: #007700">&lt;script </span><span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;text/javascript&quot;</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;https://maps.googleapis.com/maps/api/js?libraries=places&quot;</span><span style="color: #007700">&gt;&lt;/script&gt;</span>
+<span style="color: #007700">&lt;script </span><span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;js/routeplannerapi.min.js&quot;</span><span style="color: #007700">&gt;&lt;/script&gt;</span>
+</pre></td></tr></table></div>
+
+
+
+      </p>
+    </div>
+    
+    
+    <p><strong>Set up Form, to get Starting and Ending Location and call calcRoute(); function on button submit as below :</strong> </p>
+    
+    <div class="code">
+      <p>
+   
+   <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;form</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;form-inline&quot;</span> <span style="color: #0000CC">role=</span><span style="background-color: #fff0f0">&quot;form&quot;</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;multiple-destination&quot;</span><span style="color: #007700">&gt;</span>
+  
+  <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;form-group&quot;</span><span style="color: #007700">&gt;</span>
+    <span style="color: #007700">&lt;label</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;sr-only&quot;</span> <span style="color: #0000CC">for=</span><span style="background-color: #fff0f0">&quot;start&quot;</span><span style="color: #007700">&gt;</span>Starting Location :<span style="color: #007700">&lt;/label&gt;</span>
+    <span style="color: #007700">&lt;input</span> <span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;text&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;form-control&quot;</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;start&quot;</span> <span style="color: #0000CC">placeholder=</span><span style="background-color: #fff0f0">&quot;Enter Starting Location&quot;</span><span style="color: #007700">&gt;</span>
+  <span style="color: #007700">&lt;/div&gt;</span>
+  
+  <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;form-group&quot;</span><span style="color: #007700">&gt;</span>
+    <span style="color: #007700">&lt;label</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;sr-only&quot;</span> <span style="color: #0000CC">for=</span><span style="background-color: #fff0f0">&quot;end&quot;</span><span style="color: #007700">&gt;</span>Destination Location :<span style="color: #007700">&lt;/label&gt;</span>
+    <span style="color: #007700">&lt;input</span> <span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;text&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;form-control&quot;</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;end&quot;</span> <span style="color: #0000CC">placeholder=</span><span style="background-color: #fff0f0">&quot;Enter Destination Location&quot;</span><span style="color: #007700">&gt;</span>
+  <span style="color: #007700">&lt;/div&gt;</span>
+  
+  <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;form-group&quot;</span><span style="color: #007700">&gt;</span>
+  <span style="color: #007700">&lt;select</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;form-control&quot;</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;mode&quot;</span> <span style="color: #0000CC">name=</span><span style="background-color: #fff0f0">&quot;mode&quot;</span><span style="color: #007700">&gt;</span>
+  <span style="color: #007700">&lt;option</span> <span style="color: #0000CC">value=</span><span style="background-color: #fff0f0">&quot;DRIVING&quot;</span><span style="color: #007700">&gt;</span>Driving<span style="color: #007700">&lt;/option&gt;</span>
+      <span style="color: #007700">&lt;option</span> <span style="color: #0000CC">value=</span><span style="background-color: #fff0f0">&quot;WALKING&quot;</span><span style="color: #007700">&gt;</span>Walking<span style="color: #007700">&lt;/option&gt;</span>
+      <span style="color: #007700">&lt;option</span> <span style="color: #0000CC">value=</span><span style="background-color: #fff0f0">&quot;BICYCLING&quot;</span><span style="color: #007700">&gt;</span>Bicycling<span style="color: #007700">&lt;/option&gt;</span>
+      <span style="color: #007700">&lt;option</span> <span style="color: #0000CC">value=</span><span style="background-color: #fff0f0">&quot;TRANSIT&quot;</span><span style="color: #007700">&gt;</span>Transit<span style="color: #007700">&lt;/option&gt;</span>
+<span style="color: #007700">&lt;/select&gt;</span>
+  <span style="color: #007700">&lt;/div&gt;</span>
+  
+  <span style="color: #007700">&lt;button</span> <span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;button&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;btn btn-success&quot;</span> <span style="color: #0000CC">onClick=</span><span style="background-color: #fff0f0">&quot;_ZNRPL_Add_Element();&quot;</span><span style="color: #007700">&gt;&lt;span</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;glyphicon glyphicon-plus&quot;</span> <span style="color: #0000CC">aria-hidden=</span><span style="background-color: #fff0f0">&quot;true&quot;</span><span style="color: #007700">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+    
+    
+    
+<span style="color: #007700">&lt;/form&gt;</span>
+
+      
+      <span style="color: #007700">&lt;button</span> <span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;button&quot;</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;btn btn-success&quot;</span> <span style="color: #0000CC">onClick=</span><span style="background-color: #fff0f0">&quot;calcRoute();&quot;</span> <span style="color: #0000CC">style=</span><span style="background-color: #fff0f0">&#39;margin-top:5px;&#39;</span><span style="color: #007700">&gt;</span>Get Route<span style="color: #007700">&lt;/button&gt;</span>
+</pre></td></tr></table></div>
+
+
+
+      </p>
+    </div>
+    
+    
+    
+    <p><strong>Add Google Map Div and Google Direction Div in the Page as below</strong> </p>
+		  
+		<div class="code">
+      <p>
+      
+     <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;map-canvas&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+<span style="color: #007700">&lt;div</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;directionsPanel&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+</pre></td></tr></table></div>
+
+
+
+      </p>
+    </div>
+    
+    
+  <p><strong>Thats it ! you are good to go if you want to do any changes please follow below instructions :</strong> </p>  
+  
+  
+   <div class="code">
+      <p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">var</span> _ZNRPL <span style="color: #333333">=</span> {
+latitude <span style="color: #333333">:</span> <span style="color: #6600EE; font-weight: bold">41.850033</span>,
+longitude <span style="color: #333333">:</span> <span style="color: #333333">-</span><span style="color: #6600EE; font-weight: bold">87.6500523</span>,
+start<span style="color: #333333">:</span><span style="background-color: #fff0f0">&quot;&quot;</span>,
+end<span style="color: #333333">:</span><span style="background-color: #fff0f0">&quot;&quot;</span>,
+getgeo<span style="color: #333333">:</span><span style="color: #008800; font-weight: bold">true</span>,
+adsense<span style="color: #333333">:</span><span style="color: #008800; font-weight: bold">false</span>,
+publisherid<span style="color: #333333">:</span><span style="background-color: #fff0f0">&quot;ca-google-maps_apidocs&quot;</span>,
+adformat <span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;BANNER&quot;</span>,
+adposition <span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;RIGHT_BOTTOM&quot;</span>,
+adbackgroundColor<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;#c4d4f3&#39;</span>,
+adborderColor<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;#e5ecf9&#39;</span>,
+adtitleColor<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;#0000cc&#39;</span>,
+adtextColor<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;#000000&#39;</span>,
+adurlColor<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;#009900&#39;</span>,
+map<span style="color: #333333">:</span><span style="background-color: #fff0f0">&quot;&quot;</span>,
+adUnit<span style="color: #333333">:</span><span style="background-color: #fff0f0">&quot;&quot;</span>,
+directionsDisplay<span style="color: #333333">:</span><span style="background-color: #fff0f0">&quot;&quot;</span>,
+directionsService<span style="color: #333333">:</span><span style="background-color: #fff0f0">&quot;&quot;</span>,
+distance_unit<span style="color: #333333">:</span><span style="background-color: #fff0f0">&quot;Miles&quot;</span>,
+enable_pricing<span style="color: #333333">:</span><span style="color: #008800; font-weight: bold">true</span>,
+unit_price<span style="color: #333333">:</span><span style="color: #0000DD; font-weight: bold">2</span>,
+currency_symbole<span style="color: #333333">:</span><span style="background-color: #fff0f0">&quot;$&quot;</span>
+};
+</pre></td></tr></table></div>
+
+
+
+
+      </p>
+    </div>
+    
+		
+		<p><strong>You can set the variables, as per your requirement like below :</strong> </p>
+		  
+          <p><strong>You can set your center location when page load by providing latitude and longitude of your location.</strong></p>
+
+
+		<div class="code">
+      <p>
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2
+3</pre></td><td><pre style="margin: 0; line-height: 125%">latitude <span style="color: #333333">:</span> <span style="color: #6600EE; font-weight: bold">41.850033</span>,
+
+longitude <span style="color: #333333">:</span> <span style="color: #333333">-</span><span style="color: #6600EE; font-weight: bold">87.6500523</span>,
+</pre></td></tr></table></div>
+
+      </p>
+    </div>
+    
+    
+    
+    <p><strong>You can setup your starting or ending location as below</strong> </p>
+		  
+		<div class="code">
+      <p>
+      
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2
+3</pre></td><td><pre style="margin: 0; line-height: 125%"> start<span style="color: #333333">:</span><span style="background-color: #fff0f0">&quot;Chicago&quot;</span>,
+
+end <span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;New York&quot;</span>,
+</pre></td></tr></table></div>
+
+      
+      </p>
+    </div>
+    
+    
+    <p><strong>You can enable or disable Google Adsense as below</strong> </p>
+		  
+		<div class="code">
+      <p>
+      
+      <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%">adsense<span style="color: #333333">:</span><span style="color: #008800; font-weight: bold">true</span>,
+</pre></td></tr></table></div>
+
+      
+      </p>
+    </div>
+    
+    
+    <p><strong>If adsense is enable you have to set your publisher id as below</strong> </p>
+		  
+		<div class="code">
+      <p>
+      
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%">  publisherid<span style="color: #333333">:</span><span style="background-color: #fff0f0">&quot;ca-google-maps_apidocs&quot;</span>,
+</pre></td></tr></table></div>
+
+
+
+      </p>
+    </div>
+    
+    
+    <p><strong>If adsense is enable you have to set Type of Banner Format as below</strong> </p>
+		  
+		<div class="code">
+      <p>
+      
+      <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%"> adformat <span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;BANNER&quot;</span>,
+</pre></td></tr></table></div>
+
+
+
+      </p>
+    </div>
+    
+    <p><strong>As per Google Adsense, Banner Format can be :</strong>
+    
+<ul>
+  <li><code>LEADERBOARD</code> creates a fully horizontal display area.</li>
+  <li><code>BANNER</code> creates a horizontal "banner" ad.</li>
+  <li><code>HALF_BANNER</code> creates a smaller horizontal "banner" ad.</li>
+  <li><code>SKYSCRAPER</code> creates a large vertical ad.</li>
+  <li><code>WIDE_SKYSCRAPER</code> creates a wide vertical ad using larger
+    type.</li>
+  <li><code>VERTICAL_BANNER</code> creates a medium-sized vertical ad.</li>
+  <li><code>BUTTON</code> creates a small ad.</li>
+  <li><code>SMALL_SQUARE</code> creates a slightly larger square ad.</li>
+  <li><code>SQUARE</code> creates a large square ad with large type.</li>
+  <li><code>SMALL_RECTANGLE</code> creates a small rectangular ad.</li>
+  <li><code>MEDIUM_RECTANGLE</code> creates a medium rectangular ad.</li>
+  <li><code>LARGE_RECTANGLE</code> creates a large rectangular ad.</li>
+  <li><code>SMALL_VERTICAL_LINK_UNIT</code> creates a small vertical link
+    unit.</li>
+  <li><code>MEDIUM_VERTICAL_LINK_UNIT</code> creates a medium vertical link
+    unit.</li>
+  <li><code>LARGE_VERTICAL_LINK_UNIT</code> creates a large vertical link
+    unit.</li>
+  <li><code>X_LARGE_VERTICAL_LINK_UNIT</code> creates an extra large vertical
+    link unit.</li>
+  <li><code>SMALL_HORIZONTAL_LINK_UNIT</code> creates a small horizontal link
+    unit.</li>
+  <li><code>LARGE_HORIZONTAL_LINK_UNIT</code> creates a large horizontal link
+    unit.</li>
+</ul>    
+    
+    </p>
+    
+    
+    
+    <p><strong>If adsense is enable you have to set Position of Banner as below</strong> </p>
+		  
+		<div class="code">
+      <p>
+      
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%"> adposition <span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;RIGHT_BOTTOM&quot;</span>,
+</pre></td></tr></table></div>
+
+
+      </p>
+    </div>
+    
+    
+    
+    <p><strong>As per Google Adsense, Banner Position can be :</strong>
+    
+<ul>
+  <li><code>TOP_CENTER</code> indicates that the adunit should be placed
+    along the top center of the map.</li>
+  <li><code>TOP_LEFT</code> indicates that the adunit should be placed along
+    the top left of the map, with any sub-elements of the control "flowing"
+    towards the top center.</li>
+  <li><code>TOP_RIGHT</code> indicates that the adunit should be placed along
+    the top right of the map, with any sub-elements of the control "flowing"
+    towards the top center.</li>
+  <li><code>LEFT_TOP</code> indicates that the adunit should be placed along
+    the top left of the map, but below any <code>TOP_LEFT</code> elements.</li>
+  <li><code>RIGHT_TOP</code> indicates that the adunit should be placed along
+    the top right of the map, but below any <code>TOP_RIGHT</code>
+    elements.</li>
+  <li><code>LEFT_CENTER</code> indicates that the adunit should be placed
+    along the left side of the map, centered between the <code>TOP_LEFT</code>
+    and <code>BOTTOM_LEFT</code> positions.</li>
+  <li><code>RIGHT_CENTER</code> indicates that the adunit should be placed
+    along the right side of the map, centered between the
+    <code>TOP_RIGHT</code> and <code>BOTTOM_RIGHT</code> positions.</li>
+  <li><code>LEFT_BOTTOM</code> indicates that the adunit should be placed
+    along the bottom left of the map, but above any <code>BOTTOM_LEFT</code>
+    elements.</li>
+  <li><code>RIGHT_BOTTOM</code> indicates that the adunit should be placed
+    along the bottom right of the map, but above any <code>BOTTOM_RIGHT</code>
+    elements.</li>
+  <li><code>BOTTOM_CENTER</code> indicates that the adunit should be placed
+    along the bottom center of the map.</li>
+  <li><code>BOTTOM_LEFT</code> indicates that the adunit should be placed
+    along the bottom left of the map, with any sub-elements of the control
+    "flowing" towards the bottom center.</li>
+  <li><code>BOTTOM_RIGHT</code> indicates that the adunit should be placed
+    along the bottom right of the map, with any sub-elements of the control
+    "flowing" towards the bottom center.</li>
+</ul>  
+    
+    </p>
+    
+    
+    
+    <p><strong>If adsense is enable you have to set Colors Scheme of Banner as below in hex format</strong> </p>
+		  
+		<div class="code">
+      <p>
+      
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2
+3
+4
+5</pre></td><td><pre style="margin: 0; line-height: 125%">adbackgroundColor<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;#c4d4f3&#39;</span>,
+adborderColor<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;#e5ecf9&#39;</span>,
+adtitleColor<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;#0000cc&#39;</span>,
+adtextColor<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;#000000&#39;</span>,
+adurlColor<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;#009900&#39;</span>
+</pre></td></tr></table></div>
+
+
+      </p>
+    </div>
+    
+    
+    
+    
+		
+		<hr>
+		
+		
+		<h3 id="credits"><strong>E) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the Bootstrap 3.2 for presentation, Google Map API 3.0, Jquery 1.11 in our tool.
+		
+	
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this product. As I said at the beginning, I'd be glad to help you if you have any questions relating to this product. No guarantees, but I'll do my best to assist. If you have a more general question relating to the product on Codecanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Zincksoft.com</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

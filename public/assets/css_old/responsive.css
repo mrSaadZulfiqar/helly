@@ -1,0 +1,106 @@
+@media only screen and (max-width: 991px) {
+  .header-area-one .header-top-bar .top-right,
+  .header-area-two .header-top-bar .top-right,
+  .header-area-one .header-top-bar .top-left,
+  .header-area-two .header-top-bar .top-left {
+    text-align: center;
+  }
+
+  .header-area-one .header-top-bar .top-left span,
+  .header-area-two .header-top-bar .top-left span {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .header-area-one .header-top-bar .top-right,
+  .header-area-two .header-top-bar .top-right {
+    margin-top: 15px;
+  }
+
+  .header-area-one .header-top-bar .top-right ul,
+  .header-area-two .header-top-bar .top-right {
+    justify-content: center !important;
+  }
+
+  .header-area-two .header-top-bar::before {
+    background-color: var(--heading-color);
+  }
+
+  .header-area-two .header-top-bar .top-left span {
+    color: #ffffff !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .about-img-box-one{
+    min-height: auto;
+    margin-right: 0 !important;
+  }
+  .about-img-box-one .about-img-one{
+    position: static;
+  }
+  .footer-area-one .footer-widget .widget.footer-widget-nav,
+  .footer-area-one .footer-widget .widget.contact-info-widget{
+    padding-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .header-area-one .primary-menu:before,
+  .header-area-one .primary-menu:after {
+    display: none;
+  }
+
+  .process-item-one:after {
+    display: none;
+  }
+  header .header-navigation .primary-menu,
+  header .container-fluid,
+  .header-navigation.breakpoint-on .primary-menu{
+    padding-inline: 15px;
+  }
+  .breadcrumbs-area .page-title h1,
+  .single-hero-slider .hero-content h1{
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .single-hero-slider .hero-content p{
+    padding-inline: 0;
+  }
+  .single-hero-slider{
+    padding-block: 130px;
+  }
+  .newsletter-wrapper-one .newsletter-content-box,
+  .newsletter-wrapper-one{
+    transform: none;
+  }
+  .newsletter-wrapper-one .newsletter-form .form_control{
+    clip-path: none;
+  }
+  .newsletter-wrapper-one .newsletter-form .newsletter-btn{
+    position: static;
+    clip-path: none;
+    margin-top: 10px;
+  }
+
+  .pricing-item-three{
+    flex-direction: column;
+  }
+  .pricing-item-three .pricing-img a.bg-img{
+    background: unset !important;
+  }
+  .pricing-item-three .pricing-img img{
+    display: block !important;
+  }
+  .pricing-item-three .pricing-img{
+    max-width: 100%;
+  }
+  .pricing-item-three .pricing-info .pricing-bottom{
+    flex-direction: column;
+  }
+}
+@media (max-width: 400px) {
+  .header-area-one .header-top-bar .top-right>ul>li {
+    margin-left: 5px;
+    font-size: 14px;
+  }
+}
